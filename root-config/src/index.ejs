@@ -17,7 +17,7 @@
     This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
     Learn more about CSP policies at https://content-security-policy.com/#directive
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; img-src 'self' 'unsafe-inline' 'unsafe-eval' https: localhost:* data:; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
   <meta name="importmap-type" content="systemjs-importmap" />
   <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
   <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
@@ -54,7 +54,7 @@
         "@pc/home": "//localhost:9001/pc-home.js",
         "@pc/nav-bar": "//localhost:9002/pc-nav-bar.js",
         "@pc/product": "//localhost:9010/pc-product.js",
-        "@pc/sales": "//localhost:9011/pc-sales.js"
+        "@pc/sales": "//localhost:9011/main.js"
       }
     }
   </script>

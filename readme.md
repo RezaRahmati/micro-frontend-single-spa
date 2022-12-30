@@ -1,5 +1,5 @@
 ## create new project
-npx create-single-spa
+`npx create-single-spa`
 
 ## links
 https://medium.com/swlh/developing-and-deploying-micro-frontends-with-single-spa-c8b49f2a1b1d

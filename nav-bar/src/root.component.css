@@ -1,0 +1,18 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+  }
+  
+  .link {
+    margin-right: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .link:hover,
+  .link:focus {
+    color: #1098f7;
+  }

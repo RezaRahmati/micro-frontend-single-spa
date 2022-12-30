@@ -1,0 +1,56 @@
+<h5><dx-button icon='chevronleft'
+               (click)="backClick()"></dx-button> Order #{{data?.id}}</h5>
+
+<ng-container *ngIf="data && data.products">
+    <dx-data-grid id="gridContainer"
+                  [dataSource]="data.products"
+                  keyExpr="id"
+                  [showBorders]="true"
+                  [allowColumnResizing]="true"
+                  [allowColumnReordering]="true"
+                  [columnAutoWidth]="true">
+        <dxo-header-filter [visible]="true"></dxo-header-filter>
+        <dxi-column dataField="title"
+                    caption="Product"></dxi-column>
+        <dxi-column dataField="quantity"
+                    caption="Quantity"></dxi-column>
+        <dxi-column dataField="price"
+                    caption="Price">
+            <dxo-format type="currency"
+                        [precision]="2"
+                        currency="CAD"></dxo-format>
+        </dxi-column>
+        <dxi-column dataField="total"
+                    caption="Total">
+            <dxo-format type="currency"
+                        [precision]="2"
+                        currency="CAD"></dxo-format>
+        </dxi-column>
+        <dxi-column dataField="discountPercentage"
+                    caption="Discount %">
+            <dxo-format type="fixedPoint"
+                        [precision]="2"></dxo-format>
+        </dxi-column>
+        <dxi-column dataField="discountedPrice"
+                    caption="Discount">
+            <dxo-format type="currency"
+                        [precision]="2"
+                        currency="CAD"></dxo-format>
+        </dxi-column>
+        <dxo-summary>
+            <dxi-total-item column="title"
+                            summaryType="count"> </dxi-total-item>
+            <dxi-total-item column="quantity"
+                            summaryType="sum">
+            </dxi-total-item>
+            <dxi-total-item column="total"
+                            summaryType="sum"
+                            [valueFormat]="{ type: 'currency', currency:'CAD', precision: 2 }">
+            </dxi-total-item>
+            <dxi-total-item column="discountedPrice"
+                            summaryType="sum"
+                            [valueFormat]="{ type: 'currency', currency:'CAD', precision: 2 }">
+            </dxi-total-item>
+        </dxo-summary>
+    </dx-data-grid>
+</ng-container>

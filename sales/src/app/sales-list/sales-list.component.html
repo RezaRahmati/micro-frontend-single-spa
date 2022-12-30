@@ -1,0 +1,49 @@
+<ng-container *ngIf="data && data.carts">
+    <dx-data-grid id="gridContainer"
+                  [dataSource]="data.carts"
+                  keyExpr="id"
+                  [showBorders]="true"
+                  [allowColumnResizing]="true"
+                  [allowColumnReordering]="true"
+                  [columnAutoWidth]="true">
+        <dxo-group-panel [visible]="true"></dxo-group-panel>
+        <dxo-header-filter [visible]="true"></dxo-header-filter>
+        <dxo-search-panel [visible]="true"
+                          [width]="240"
+                          placeholder="Search..."></dxo-search-panel>
+        <dxo-paging [pageSize]="10"></dxo-paging>
+        <dxo-pager [visible]="true"
+                   [allowedPageSizes]="[ 10, 25, 50, 100 ]"
+                   displayMode="full"
+                   [showPageSizeSelector]="true"
+                   [showInfo]="true"
+                   [showNavigationButtons]="true"></dxo-pager>
+        <dxi-column dataField="id"
+                    caption="Order Id"
+                    dataType="string"
+                    alignment="center"
+                    cellTemplate="idCellTemplate"></dxi-column>
+        <dxi-column dataField="totalProducts"
+                    caption="Total Products"></dxi-column>
+        <dxi-column dataField="totalQuantity"
+                    caption="Total Quantity"></dxi-column>
+        <dxi-column dataField="total"
+                    caption="Total Price">
+            <dxo-format type="currency"
+                        [precision]="2"
+                        currency="CAD"></dxo-format>
+        </dxi-column>
+        <dxi-column dataField="discountedTotal"
+                    caption="Total Discount">
+            <dxo-format type="currency"
+                        [precision]="2"
+                        currency="CAD"></dxo-format>
+        </dxi-column>
+        <div *dxTemplate="let d of 'idCellTemplate'">
+            <a [routerLink]="['/details', d.value]">
+
+                {{d.value}}
+            </a>
+        </div>
+    </dx-data-grid>
+</ng-container>

@@ -1,0 +1,47 @@
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+
+.details {
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.details .info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0px 0px 0px 1rem;
+    box-sizing: border-box;
+    color: #333;
+    border-bottom: 1px solid rgb(219, 219, 219);
+
+}
+
+.sub-title {
+    padding-right: 1rem;
+}
+
+.gallery {
+    padding: 0 1rem;
+}
+
+.product-details {
+    padding: 1rem;
+}

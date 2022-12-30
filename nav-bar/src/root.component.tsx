@@ -11,7 +11,7 @@ export default function Root(props) {
       <Link to="/product" className="link">
         Product
       </Link>
-      <Link to="/sales" className="link">
+      <Link to="/sales/list" className="link">
         Sales
       </Link>
     </nav>

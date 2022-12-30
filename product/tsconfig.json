@@ -2,7 +2,8 @@
   "extends": "ts-config-single-spa",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "moduleResolution": "node"
   },
   "files": ["src/pc-product.tsx"],
   "include": ["src/**/*"],

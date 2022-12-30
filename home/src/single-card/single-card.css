@@ -1,0 +1,26 @@
+.single-card .dx-card {
+    width: 70vw;
+    margin: auto auto;
+    padding: 40px;
+    flex-grow: 0;
+}
+.screen-x-small .single-card .dx-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    border: 0;
+    flex-grow: 1;
+}
+.single-card .dx-card .header {
+    margin-bottom: 30px;
+}
+.single-card .dx-card .header .title {
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 24px;
+}
+.single-card .dx-card .header .description {
+    line-height: 18px;
+}

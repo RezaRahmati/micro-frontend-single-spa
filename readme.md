@@ -31,6 +31,7 @@
     },  
 ```
 - `npm i url-loader`
+- add `AuthGuardedRoute` (like product app)
 
 ## Anguler for this poc
 - `npm i devextreme devextreme-angular @ngneat/until-destroy`

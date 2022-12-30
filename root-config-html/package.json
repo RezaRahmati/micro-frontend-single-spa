@@ -1,0 +1,13 @@
+{
+    "name": "root-html-file",
+    "description": "The single-spa root config for microfrontends",
+    "main": "index.js",
+    "scripts": {
+        "start": "serve -s -l 9900"
+    },
+    "author": "Reza Rahmati",
+    "license": "MIT",
+    "devDependencies": {
+        "serve": "^14.1.2"
+    }
+}

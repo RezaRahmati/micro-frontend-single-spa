@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src *  data: blob: 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * data: blob: 'unsafe-inline'; font-src * data: blob: 'unsafe-inline';">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <title>Micro-Frontend PoC</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <meta name="importmap-type"
+          content="systemjs-importmap">
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+            "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/5.5.0/system/single-spa.min.js",
+            "single-spa-layout": "https://unpkg.com/single-spa-layout@1.0.0-beta.2/dist/system/single-spa-layout.min.js",
+            "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+            "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+            "@pc/home": "//localhost:9001/pc-home.js",
+            "@pc/nav-bar": "//localhost:9002/pc-nav-bar.js",
+            "@pc/product": "//localhost:9010/pc-product.js",
+            "@pc/sales": "//localhost:9011/main.js"
+        }
+      }
+    </script>
+    <link rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/single-spa/5.9.3/system/single-spa.min.js"
+          as="script"
+          crossorigin="anonymous" />
+    <script src='https://unpkg.com/core-js-bundle@3.1.4/minified.js'></script>
+    <script src="https://unpkg.com/zone.js@0.11.4/dist/zone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/system.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-exports.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+    <template id="single-spa-layout">
+    <single-spa-router>
+        <!--
+      
+          This is the single-spa Layout Definition for your microfrontends.
+          See https://single-spa.js.org/docs/layout-definition/ for more information.
+      
+        -->
+       
+        <nav>
+          <application name="@pc/nav-bar"></application>
+        </nav>
+        <route path="product">
+          <application name="@pc/product"></application>
+        </route>
+      
+        <route path="sales">
+          <application name="@pc/sales"></application>
+        </route>
+      
+        <main>
+          <route default>
+            <application name="@pc/home"></application>
+          </route>
+        </main>
+      </single-spa-router>
+    </template>
+
+    <style>
+        body, html { margin: 0; padding: 0; font-size: 16px; font-family: Arial, Helvetica, sans-serif; height: 100%; }
+        body { display: flex; flex-direction: column; }
+        * { box-sizing: border-box; }
+      </style>    
+</head>
+
+<body>
+    <script>
+        Promise.all( [ System.import( 'single-spa' ), System.import( 'single-spa-layout' ) ] ).then( ( [ singleSpa, singleSpaLayout ] ) => {
+            const { constructApplications, constructLayoutEngine, constructRoutes } = singleSpaLayout;
+            const { registerApplication, start } = singleSpa;
+
+            const routes = constructRoutes( document.querySelector( '#single-spa-layout' ) );
+            const applications = constructApplications( {
+                routes,
+                loadApp ( { name } ) {
+                    return System.import( name );
+                },
+            } );
+            const layoutEngine = constructLayoutEngine( { routes, applications } );
+            applications.forEach( registerApplication );
+
+            start();
+        } );
+    </script>
+    <import-map-overrides-full></import-map-overrides-full>
+</body>
+
+</html>

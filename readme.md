@@ -6,7 +6,17 @@
 - in the root-config project update `pc-root-config.ts` file and add the new app there
 - in the root-config project update `microfrontend-layout.html` file and add the new app there
 
+## angular
+- make sure you add below code to your app-routing.module.ts
+```
+  providers: [
+    { provide: APP_BASE_HREF, useValue: '/REPLACE-WITH-YOUR-ROUTE' }
+  ]
+```
+
 ## links
 https://medium.com/swlh/developing-and-deploying-micro-frontends-with-single-spa-c8b49f2a1b1d
 https://blog.bitsrc.io/building-microfrontends-using-single-spa-framework-94019ca2fb4d
 
+Angular example
+https://github.com/joeldenning/coexisting-angular-microfrontends

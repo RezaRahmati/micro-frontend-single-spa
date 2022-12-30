@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.login-form {
+    .link {
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    ::ng-deep .form-text {
+        margin: 10px 0;
+    }
+}

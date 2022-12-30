@@ -21,6 +21,7 @@
             "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
             "@pc/home": "//localhost:9001/pc-home.js",
             "@pc/nav-bar": "//localhost:9002/pc-nav-bar.js",
+            "@pc/auth": "//localhost:9003/main.js",
             "@pc/product": "//localhost:9010/pc-product.js",
             "@pc/sales": "//localhost:9011/main.js"
         }
@@ -55,6 +56,10 @@
         <route path="sales">
           <application name="@pc/sales"></application>
         </route>
+
+        <route path="auth">
+          <application name="@pc/auth"></application>
+        </route>
       
         <main>
           <route default>
@@ -68,6 +73,10 @@
         body, html { margin: 0; padding: 0; font-size: 16px; font-family: Arial, Helvetica, sans-serif; height: 100%; }
         body { display: flex; flex-direction: column; }
         * { box-sizing: border-box; }
+
+        #single-spa-application\:\@pc\/auth {
+          height: 100%;
+        }
       </style>    
 </head>
 

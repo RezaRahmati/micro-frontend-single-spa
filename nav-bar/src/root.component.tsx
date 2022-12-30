@@ -14,6 +14,12 @@ export default function Root(props) {
       <Link to="/sales" className="link">
         Sales
       </Link>
+      <Link to="/auth/login" className="link">
+        Login (Temporary)
+      </Link>
+      <Link to="/auth/logout" className="link">
+        Logout (Temporary)
+      </Link>
     </nav>
   </BrowserRouter>
 

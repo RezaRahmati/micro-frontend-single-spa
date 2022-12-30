@@ -38,6 +38,7 @@
 - add `"node_modules/devextreme/dist/css/dx.material.orange.light.css",` to both `styles` sections in `angular.json`
 - add a new script in `package.json` as `"serve": "ng serve",` and update your existing start command to `"start": "npm run serve:single-spa:xxx",` which xxx is name of your app 
 - comment out `import 'zone.js'; ` in the `polyfills.ts` 
+- add session service and auth guard (like sales app)
 
 ## links
 https://medium.com/swlh/developing-and-deploying-micro-frontends-with-single-spa-c8b49f2a1b1d

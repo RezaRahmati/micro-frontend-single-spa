@@ -18,7 +18,7 @@ export default function Root(props) {
         Login (Temporary)
       </Link>
       <Link to="/auth/logout" className="link">
-        Logout (Temporary)
+        Logout
       </Link>
     </nav>
   </BrowserRouter>

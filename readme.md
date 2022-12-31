@@ -21,7 +21,7 @@ in the root
 - root-config [EJS Template] : Serving as shell to host all micro-frontend apps 
 - root-config-html [JS and Html] : Serving as shell to host all micro-frontend apps 
 - home [React] : A home page, that doesn't need any authentication and is the default app
-- nva-bar [React] : Display Navbar on top of the app
+- nav-bar [React] : Display Navbar on top of the app
 - auth [Angular] : Angular app for login (and create new user, forget password in future)
 - product [React] : Show the list and details of products
 - sales [Angular] : Show the list and details of sales

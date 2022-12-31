@@ -6,7 +6,7 @@
         "start": "serve -s -l 9900"
     },
     "author": "Reza Rahmati",
-    "license": "MIT",
+    "license": "ISC",
     "devDependencies": {
         "serve": "^14.1.2"
     }

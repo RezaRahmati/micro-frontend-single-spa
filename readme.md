@@ -1,3 +1,11 @@
+## Micro FrontEnd
+Micro-frontend architectures decompose a front-end app into individual, semi-independent “microapps” working loosely together. This can help make large projects more manageable, e.g. when transitioning from legacy codebases.
+
+![alt text](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/micro-frontend.jpeg?raw=true)
+
+## Technology stack in this project
+- [single-spa](https://single-spa.js.org/) 
+
 ## create new project
 `npx create-single-spa`
 

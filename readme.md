@@ -27,7 +27,9 @@ in the root
 - sales [Angular] : Show the list and details of sales
 
 ## create new project
-`npx create-single-spa`
+- run `npx create-single-spa` (or you can install `create-single-spa` globally)
+- follow the prompts (for apps choose application/parcel)
+- apply below changes based on the framework you chose
 
 ## react
 - in the react app update `start` script and add `--port 9xxx` to it
@@ -61,7 +63,7 @@ in the root
 - `npm i url-loader`
 - add `AuthGuardedRoute` (like product app)
 
-## Anguler for this poc
+## Angular for this poc
 - `npm i devextreme devextreme-angular @ngneat/until-destroy`
 - update `body` in the `index.html` to `<body class="dx-viewport">`
 - add `"node_modules/devextreme/dist/css/dx.material.orange.light.css",` to both `styles` sections in `angular.json`
@@ -69,9 +71,9 @@ in the root
 - comment out `import 'zone.js'; ` in the `polyfills.ts` 
 - add session service and auth guard (like sales app)
 
-## links
+## More to read
 https://medium.com/swlh/developing-and-deploying-micro-frontends-with-single-spa-c8b49f2a1b1d
 https://blog.bitsrc.io/building-microfrontends-using-single-spa-framework-94019ca2fb4d
 
-Angular example
+## Angular example
 https://github.com/joeldenning/coexisting-angular-microfrontends

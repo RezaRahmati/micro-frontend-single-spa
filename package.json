@@ -1,0 +1,30 @@
+{
+  "name": "micro-fe-single-spa",
+  "version": "1.0.0",
+  "description": "Micro frontend PoC using Single-spa, Angular, React",
+  "scripts": {
+    "install": "npm-run-all --serial install:*",
+    "install:backend": "cd backend && npm install",
+    "install:root-config": "cd root-config && npm install",
+    "install:root-config-html": "cd root-config-html && npm install",
+    "install:auth": "cd auth && npm install",
+    "install:navbar": "cd nav-bar && npm install",
+    "install:home": "cd home && npm install",
+    "install:product": "cd product && npm install",
+    "install:sales": "cd sales && npm install",
+    "start": "npm-run-all --parallel start:*",
+    "start:backend": "cd backend && npm start",
+    "start:root-config": "cd root-config && npm start",
+    "start:root-config-html": "cd root-config-html && npm start",
+    "start:auth": "cd auth && npm start",
+    "start:navbar": "cd nav-bar && npm start",
+    "start:home": "cd home && npm start",
+    "start:product": "cd product && npm start",
+    "start:sales": "cd sales && npm start"
+  },
+  "author": "Reza Rahmati",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

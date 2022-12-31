@@ -23,7 +23,7 @@
     "start:sales": "cd sales && npm start"
   },
   "author": "Reza Rahmati",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "npm-run-all": "^4.1.5"
   }

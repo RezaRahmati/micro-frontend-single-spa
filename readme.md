@@ -78,6 +78,10 @@ Some Screenshots
 - comment out `import 'zone.js'; ` in the `polyfills.ts` 
 - add session service and auth guard (like sales app)
 
+## Future expansion
+- deploy to production
+- creating *in-browser utility modules* for style guide
+
 ## More to read
 https://medium.com/swlh/developing-and-deploying-micro-frontends-with-single-spa-c8b49f2a1b1d
 https://blog.bitsrc.io/building-microfrontends-using-single-spa-framework-94019ca2fb4d

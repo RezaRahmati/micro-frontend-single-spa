@@ -5,6 +5,26 @@ Micro-frontend architectures decompose a front-end app into individual, semi-ind
 
 ## Technology stack in this project
 - [single-spa](https://single-spa.js.org/) 
+- [Angular 14](https://angular.io/)
+- [React 18](https://reactjs.org/)
+- [DevExtreme](https://js.devexpress.com/)
+- [NestJs](https://nestjs.com/)
+
+## How to run
+in the root
+- run `npm install` which will be installing all project dependencies
+- run `npm start` which will be starting all projects
+- open browser and browse `http://localhost:9000` or `http://localhost:9900` ( There are two different root projects `root-config` which is EJS template and `root-config-html` which is pure js and html )
+
+## Projects
+- backend: [NestJs] : Serving backend for all projects, in reality there should be micro-services
+- root-config [EJS Template] : Serving as shell to host all micro-frontend apps 
+- root-config-html [JS and Html] : Serving as shell to host all micro-frontend apps 
+- home [React] : A home page, that doesn't need any authentication and is the default app
+- nva-bar [React] : Display Navbar on top of the app
+- auth [Angular] : Angular app for login (and create new user, forget password in future)
+- product [React] : Show the list and details of products
+- sales [Angular] : Show the list and details of sales
 
 ## create new project
 `npx create-single-spa`

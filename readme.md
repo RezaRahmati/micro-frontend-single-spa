@@ -1,7 +1,7 @@
 ## Micro FrontEnd
 Micro-frontend architectures decompose a front-end app into individual, semi-independent “microapps” working loosely together. This can help make large projects more manageable, e.g. when transitioning from legacy codebases.
 
-![alt text](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/micro-frontend.jpeg?raw=true)
+![Micro Frontend](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/micro-frontend.jpeg?raw=true)
 
 ## Technology stack in this project
 - [single-spa](https://single-spa.js.org/) 
@@ -25,6 +25,13 @@ in the root
 - auth [Angular] : Angular app for login (and create new user, forget password in future)
 - product [React] : Show the list and details of products
 - sales [Angular] : Show the list and details of sales
+
+Some Screenshots
+![Micro Frontend - Auth](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/Auth.png?raw=true)
+![Micro Frontend - Product List](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/Product-List.png?raw=true)
+![Micro Frontend - Product Details](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/Product-Details.png?raw=true)
+![Micro Frontend - Sales List](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/Sales-List.png?raw=true)
+![Micro Frontend - Sales Details](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/Sales-Details.png?raw=true)
 
 ## create new project
 - run `npx create-single-spa` (or you can install `create-single-spa` globally)

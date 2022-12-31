@@ -33,17 +33,17 @@ Some Screenshots
 ![Micro Frontend - Sales List](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/Sales-List.png?raw=true)
 ![Micro Frontend - Sales Details](https://github.com/RezaRahmati/micro-fe-single-spa/blob/main/images/Sales-Details.png?raw=true)
 
-## create new project
+## Adding a new micro-frontend
 - run `npx create-single-spa` (or you can install `create-single-spa` globally)
 - follow the prompts (for apps choose application/parcel)
 - apply below changes based on the framework you chose
 
-## react
+## React changes
 - in the react app update `start` script and add `--port 9xxx` to it
 - in the root-config project update `pc-root-config.ts` file and add the new app there
 - in the root-config project update `microfrontend-layout.html` file and add the new app there
 
-## angular
+## Angular changes
 - make sure you add below code to your app-routing.module.ts
 ```
   providers: [
@@ -52,7 +52,7 @@ Some Screenshots
 ```
 - find and replace all `app-root` to `xxx-app-root` which xxx is name of your app 
 
-## React for this poc
+## React changes for this poc
 - update package.json file and change `prepare` to `"prepare": "cd .. && husky install",`
 - `npm i devextreme devextreme-react react-router-dom`
 - `npm i @types/react-router-dom typescript@4.7 -D`
@@ -70,7 +70,7 @@ Some Screenshots
 - `npm i url-loader`
 - add `AuthGuardedRoute` (like product app)
 
-## Angular for this poc
+## Angular changes for this poc
 - `npm i devextreme devextreme-angular @ngneat/until-destroy`
 - update `body` in the `index.html` to `<body class="dx-viewport">`
 - add `"node_modules/devextreme/dist/css/dx.material.orange.light.css",` to both `styles` sections in `angular.json`

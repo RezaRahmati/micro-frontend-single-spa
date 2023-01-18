@@ -10,7 +10,9 @@ export class ProductController {
   async getList(): Promise<any> {
     const result = await lastValueFrom(
       this.httpService
-        .get(`https://dummyjson.com/products`, {})
+        .get(`https://dummyjson.com/products`, {
+          headers: { 'Accept-Encoding': 'gzip,deflate,compress' }
+        })
         .pipe(map((res) => res.data))
     );
 
@@ -21,7 +23,9 @@ export class ProductController {
   async getById(@Param('id') id: string): Promise<any> {
     const result = await lastValueFrom(
       this.httpService
-        .get(`https://dummyjson.com/products/${id}`, {})
+        .get(`https://dummyjson.com/products/${id}`, {
+          headers: { 'Accept-Encoding': 'gzip,deflate,compress' }
+        })
         .pipe(map((res) => res.data))
     );
 
